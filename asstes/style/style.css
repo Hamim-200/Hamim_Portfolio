@@ -6,8 +6,9 @@
     /* ========== Colors ========== */
     --first-color:  #222; 
     --second-color:  #52605F; 
-    /* --second-color:  hsl(174, 8%, 35%);  */
     --text-white:#fff;
+    --blue-color:  #007ced;
+    --gray-color:#e5e5e5;
 }
 
 /*=============== BASE ===============*/
@@ -41,7 +42,7 @@
     max-width: 100%;
     height: auto;
   }
-  
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
     padding: 4.5rem 0 2rem;
@@ -92,7 +93,6 @@
   
   .about__description{
     text-align: center;
-    margin-bottom: var(--mb-2-5);
     color: var(--text-white);
   }
   
@@ -122,7 +122,7 @@
   }
   
   .scrollup{
-    color: #e5e5e5;
+    /* color: var(--gray-color); */
     font-size: 25px;
     position: fixed;
     right: 1rem;
@@ -135,7 +135,7 @@
   }
   
   .scrollup:hover{
-    background-color: var(--first-color);
+    background-color: var(--blue-color);
   }
   
   .scrollup__icon{
@@ -182,10 +182,10 @@
 }
 
 .hero-text h3{
-    color: hsl(200, 8%, 45%);
+    color: var(--second-color);
 }
 .hero-text h5 span{
-    color: #007ced;
+    color: var(--blue-color);
     font-size: 16px;
 }
 .hero-text h1{
@@ -193,24 +193,24 @@
     font-size: 3rem;
 }
 .hero-text p{
-    color: #e5e5e5;
+    color: var(--gray-color);
 }
 .btn-group{
     margin: 45px 0;
 }
 .btn-group .btn{
-    border-color: #d5d5d5;
+    border-color: var(--text-white);
     color:var(--text-white);
     background-color: #333;
     padding: 12px 25px;
     margin: 5px 0;
     margin-right: 7px;
     border-radius: 30px;
-    border: 2px solid #e5e5e5;
+    border: 2px solid var(--gray-color);
     box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
 }
 .btn.active{
-    border-color: #007ced;
+    border-color: var(--blue-color);
 }
 
 /*=============== ABOUT ===============*/
@@ -218,7 +218,7 @@
     text-align: center;
 }
  .social i{
-    color: #e5e5e5;
+    color: var(--gray-color);
     font-size: 28px;
     margin-right: 10px;
     transition: 0.5s;
@@ -226,7 +226,7 @@
    
 } 
  .social i:hover{
-    color: #007ced;
+    color: var(--blue-color);
     transform: rotate(360deg);
 }
 
@@ -238,23 +238,21 @@
 }
 
 .exprience__container>div {
-    /* background: var(--color-bg-variant); */
     padding: 2.4rem 5rem;
     border-radius: 2rem;
     border: 1px solid transparent;
-    transition: var(--transition);
 }
 
 .exprience__container>div:hover {
     background: transparent;
-    border-color: var(--color-bg-variant);
+    border-color: var(--gray-color);
     cursor: default;
 }
 
 .exprience__container>div h3 {
     text-align: center;
     margin-bottom: 2rem;
-    color:white;
+    color:var(--text-white);
 }
 
 .experience__content {
@@ -270,13 +268,13 @@
 
 .exprience__details-icon {
     margin-top: 6px;
-    color: var(--color-primary);
+    color: var(--blue-color);
 }
 .exprience__details>div h4 {
-    color: white;
+    color:var(--text-white);
 }
 .exprience__details>div,small {
-    color: red;
+    color: var(--blue-color);
 }
 
 /*=============== PORTFOLIO ===============*/
@@ -287,19 +285,12 @@
 }
 
 .portfolio__item {
-    background: var(--color-bg-variant);
+    background: transparent;
     padding: 1.3rem;
     border-radius: 2rem;
     border: 1px solid transparent;
-    transition: var(--transition);
-
-    border-color: var(--color-primary-variant);
+    border-color: var(--text-white);
     background: transparent;
-}
-
-.portfolio__item:hover {
-    border-color: white;
-    /* background: transparent; */
 }
 
 .portfolio__item-image {
@@ -309,29 +300,19 @@
 
 .portfolio__item h3 {
     margin: 1.2rem 0 2rem;
+    color: var(--gray-color);
 }
 
-.portfolio__item-cta {
+.portfolio__item-cta{
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+    
 }
-
-/* ======Responsive======= */
-/* @media screen and (max-width:1024px) {
-    .portfolio__container {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.2rem;
-    }
-} */
-
-/* Responsive (Small Devices)*/
-/* @media screen and (max-width:600px) {
-    .portfolio__container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-} */
+.portfolio__item-cta .btn{
+  color: var(--blue-color);
+  margin-left: 30px;
+}
 
 /*=============== CONTACT ===============*/
 .sectionC {
@@ -341,12 +322,6 @@
 
 .contact__container{
     row-gap: 3rem;
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-     */
- 
 }
 
 .contact__information{
@@ -356,22 +331,22 @@
 
 .contact__icon{
     font-size: 2rem;
-    color: hsl( 200, 69%, 61%);
+    color: var(--blue-color);
     margin-right: .75rem;
 }
 
 .contact__title{
     font-size:  1.125rem;
     font-weight: 600;
-    color: white;
+    color:var(--text-white);
 }
 
 .contact__subtitle{
-    color: hsl(200, 8%, 65%);
+    color: var(--gray-color);
 }
 
 .contact__subtitle:hover{
-    color:  hsl(200, 69%, 61%);
+  color: var(--blue-color);
 }
 
 /*=============== RESPONSIVE ===============*/
@@ -421,7 +396,7 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        background-color: brown;
+        background-color: var(--second-color);
         box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
         width: 100%;
         height: 4rem;
@@ -462,7 +437,7 @@
       font-size: var(--normal-font-size);
     }
     .nav__link:hover {
-      color: var(--first-color);
+      color: var(--blue-color);
     }
   
   }
